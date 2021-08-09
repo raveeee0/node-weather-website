@@ -7,7 +7,7 @@ const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
 const app = express();
-const PORT = process.nextTick.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 //Define paths for express configuration
 const publicDirectoryFolder = path.join(__dirname, '../public');

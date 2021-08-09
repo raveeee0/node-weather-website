@@ -7,6 +7,7 @@ const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
 const app = express();
+const PORT = process.nextTick.PORT || 3000;
 
 //Define paths for express configuration
 const publicDirectoryFolder = path.join(__dirname, '../public');
@@ -107,6 +108,6 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(7000, () => {
-    console.log('Server online');
+app.listenPORT(PORT, () => {
+    console.log('Server online on port ' + PORT);
 })
